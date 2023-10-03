@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+<script>
+class Calculator{
+    constructor(num1,num2){
+        this.num1=num1;
+        this.num2=num2;
+    }
+    add(){
+        display();
+        return this.num1+this.num2;
+    }
+    subtract(){
+        display();
+        return this.num1-this.num2;
+    }
+    multiply(){
+        display();
+        return this.num1*this.num2;
+    }
+    divide(){
+        display();
+        return this.num1/this.num2;
+    }
+    static display(){
+        console.log("This is a calculator app");
+        console.log("The numbers input in the calculator are: "+this.num1+" "+this.num2);
+    }
+};
+let calculator=new Calculator(30.5,0);
+console.log("Add method returns "+calculator.add());
+console.log("Subtract method returns "+calculator.subtract());
+console.log("Multiply method returns "+calculator.multiply());
+console.log("Divide method returns "+calculator.divide());
+Calculator.display();
+</script>
+</html>

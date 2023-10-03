@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">This is paragraph.</p>
+        <p id="p1">This is another paragraph.</p>
+        <input type="button" id="b1" value="click me">
+    </div>
+</body>
+<script>
+        var e=document.getElementById("b1");
+        e.addEventListener("click",function(){
+            var parent=document.getElementById("div1");
+            var child=document.getElementById("p1");
+            parent.removeChild(child);
+        })
+</script>
+</html>

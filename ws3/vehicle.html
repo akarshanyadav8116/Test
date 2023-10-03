@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+<script>
+class Vehicle{
+    constructor(make,model){
+        this.make=make;
+        this.model=model;
+    }
+}
+class Car extends Vehicle{
+    constructor(make,model,regNo,fuelType){
+        this.regNo=regNo;
+        this.fuelType=fuelType;
+        super(make,model);
+    }
+    getDetails(){
+        console.log(`${this.make},${this.model},${this.regNo},${this.fuelType}`);
+    }
+}
+let c=new Car("Hundai","i10","KA-016447","Petrol");
+c.getDetails();
+</script>
+</html>

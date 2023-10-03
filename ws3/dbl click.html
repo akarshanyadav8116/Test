@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            alert("double click event");
+        }
+        function f2(){
+            alert("mouse over event");
+        }
+        function f3(){                  //checker
+            var x=document.form1.fname;
+            x.value=x.value.toUpperCase();
+        }
+        function f4(){
+            prefer=document.f1.browsers.value;
+            alert("You prefer browsing internet with "+prefer);
+        } 
+        function f5(){
+            alert("You pressed a key inside the input field");
+        }
+        function f6(){
+            alert("Page is loaded");
+        }
+        function f7(){
+            alert("You have changed the size of browser window!")
+        }
+    </script>
+</head>
+<body onload="f6()" onresize="f7()">
+    <img src="../images/instagram.svg" ondblclick="f1()"/>
+    <input type="button" value="hover over me" onmouseover="f2()"/>
+    <form name="form1">
+        Enter your name:<input type="text" name="fname" onblur="f3()">
+    </form>
+    <p>
+        When you leave the input field, a function is triggered which transforms the input text to upper case.
+    </p>
+    <form name="f1">
+        Choose which browser to prefer:
+        <select name="" id="browsers" onchange="f4()">
+            <option value="Chrome">Chrome</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+            <option value="Firefox">Firefox</option>
+        </select>
+    </form>
+    <p>
+        A function is triggered when the user is pressing a key in the input field
+    </p>
+    <input type="text" onkeydown="f5()">
+    <h1>Hello there!</h1>
+    <p>Try to resize the browser window</p>
+</body>
+</html>
